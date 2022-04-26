@@ -1,0 +1,57 @@
+* {
+  margin: 0%;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+* body {
+  font-family: sans-serif;
+  font-family: 30px;
+}
+
+[class^="box-"] {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  border: 2px solid blue;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  height: 100vh;
+  gap: 10px 10px;
+      grid-template-areas: "A A A A    A A A A    A A A A" "A A A A    A A A A    A A A A" "B B B B    B B B B    C C C C" "B B B B    B B B B    C C C C";
+}
+
+.box-1 {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 12;
+  grid-area: A;
+}
+
+.box-2 {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 8;
+  grid-area: B;
+}
+
+.box-3 {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 9;
+  -ms-grid-column-span: 4;
+  grid-area: C;
+}
+
+@media (max-width: 400px) {
+  .container {
+        grid-template-areas: "A A A A    A A A A    A A A A" "B B B B    B B B B    B B B B" "B B B B    B B B B    B B B B" "C C C C    C C C C    C C C C";
+  }
+}
+/*# sourceMappingURL=style.css.map */
